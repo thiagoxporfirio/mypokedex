@@ -1,35 +1,23 @@
-
 <template>
-  <div class="container">
-      <h1>POKEMON`S</h1>
-      <PokemonList :imageUrl="imageUrl" :apiUrl="apiUrl" />
+  <div id="app">
+    <Pokemon />
   </div>
 </template>
 
-<script setup>
-import PokemonList from './components/PokemonList.vue';
-import PokemonDetail from './components/PokemonDetail.vue';
-import PokemonSearch from './components/PokemonSearch.vue';
+<script>
+import Pokemon from './components/Pokemon.vue'
 
-  export default {
-
-    data: () => {
-      return{
-        imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/',
-        apiUrl: 'https://pokeapi.co/api/v2/pokemon/',
-      }
-    },
-    components: {
-      PokemonDetail,
-      PokemonList,
-      PokemonSearch
-    }
-    
+export default {
+  components: {
+    Pokemon
   }
-
-
+}
 </script>
 
-<style scoped>
-
+<style lang="scss">
+  @import url('https://use.fontawesome.com/releases/v5.8.2/css/all.css');
+  body {
+    margin: 0;
+    padding: 0;
+  }
 </style>
