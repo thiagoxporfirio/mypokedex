@@ -1,26 +1,39 @@
 <template>
     <div class="container">
       <h1>POKEDEX</h1>
-      <PokemonList :imageUrl="imageUrl" :apiUrl="apiUrl" />
-
+      <PokemonList :imageUrl="imageUrl" :apiUrl="apiUrl" @setPokemonUrl="setPokemonUrl" />
+      <PokemonDetail v-if="showDetail" :pokemonUrl="pokemonUrl" :imageurl="imageUrl" @closeDetail="closeDetail" />
     </div>
 </template>
   
   <script>
-    import PokemonList from './PokemonList.vue';
+    import PokemonDetail from './PokemonDetail.vue';
+import PokemonList from './PokemonList.vue';
  
     export default {
+
       data: () => {
         return {
           imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/',
           apiUrl: 'https://pokeapi.co/api/v2/pokemon/',
           pokemonUrl: '',
+          showDetail: false
         }
       },
       components: {
-       PokemonList,
-       
-      },
+    PokemonList,
+    PokemonDetail
+},
+      methods: {
+        setPokemonUrl(url) {
+          this.pokemonUrl = url
+          this.showDetail = true
+        },
+        closeDetail() {
+          this.pokemonUrl = ''
+          this.showDetail = false
+        }
+      }
     
     }
   </script>

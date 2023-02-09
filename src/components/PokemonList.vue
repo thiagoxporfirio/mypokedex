@@ -46,29 +46,39 @@
             })
         },
         scrollTrigger() {
+
           const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
               if(entry.intersectionRatio > 0 && this.nextUrl) {
                 this.next();
               }
             });
+
           });
           observer.observe(this.$refs.infinitescrolltrigger);
         },
         next() {
+
           this.currentUrl = this.nextUrl;
           this.fetchData();
+
         },
         setPokemonUrl(url) {
+
           this.$emit('setPokemonUrl', url);
+
         }
       },
       created() {
+
         this.currentUrl = this.apiUrl;
         this.fetchData();
+
       },
       mounted() {
+
         this.scrollTrigger();
+        
       }
     }
   </script>
@@ -79,7 +89,7 @@
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       grid-gap: 10px;
       width: 100%;
-      max-width: 510px;
+      max-width: 800px;
 
       article {
         height: 150px;
