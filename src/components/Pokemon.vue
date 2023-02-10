@@ -8,6 +8,7 @@
 </template>
   
 <script>
+import PokemonSearch from './PokemonSearch.vue';
 import PokemonDetail from './PokemonDetail.vue';
 import PokemonList from './PokemonList.vue';
 
@@ -22,9 +23,10 @@ export default {
     }
   },
   components: {
+    PokemonSearch,
     PokemonList,
     PokemonDetail,
-    PokemonSearch
+    
   },
   methods: {
     setPokemonUrl(url) {

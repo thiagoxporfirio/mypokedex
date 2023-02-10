@@ -31,7 +31,7 @@
                     </div>
                 </div>
             </div>
-            <h2 v-else>The pokemon was not found</h2>
+            <h2 v-else>O pokemon não foi encontrado</h2>
             <button class="close" @click="closeDetail">Fechar</button>
         </div>
         <i v-else class="fas fa-spinner fa-spin"></i>
