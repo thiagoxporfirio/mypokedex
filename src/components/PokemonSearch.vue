@@ -50,6 +50,8 @@ export default {
             0 10px 10px rgba(0, 0, 0, .2);
         font-family: 'Nunito', sans-serif;
         color: black;
+        text-transform: lowercase;
+        background: #efefef;;
     }
 
     i {
