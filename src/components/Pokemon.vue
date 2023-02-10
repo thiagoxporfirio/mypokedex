@@ -2,13 +2,13 @@
     <div class="container">
       <h1>POKEDEX</h1>
       <PokemonList :imageUrl="imageUrl" :apiUrl="apiUrl" @setPokemonUrl="setPokemonUrl" />
-      <PokemonDetail v-if="showDetail" :pokemonUrl="pokemonUrl" :imageurl="imageUrl" @closeDetail="closeDetail" />
+      <PokemonDetail v-if="showDetail" :pokemonUrl="pokemonUrl" :imageUrl="imageUrl" @closeDetail="closeDetail" />
     </div>
 </template>
   
   <script>
     import PokemonDetail from './PokemonDetail.vue';
-import PokemonList from './PokemonList.vue';
+    import PokemonList from './PokemonList.vue';
  
     export default {
 

@@ -113,7 +113,7 @@
       justify-content: center;
       align-items: center;
       width: 100%;
-      height: 150px;
+      height: 100px;
       font-size: 2rem;
       color: #efefef;
     }
