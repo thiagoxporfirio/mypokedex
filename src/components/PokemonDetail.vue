@@ -117,7 +117,7 @@ export default {
         }
 
         h2 {
-            text-transform: capitalize;
+            
         }
 
         .data {
